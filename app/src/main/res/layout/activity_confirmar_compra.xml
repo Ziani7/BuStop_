@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#F7F9FC"
+    android:orientation="vertical"
+    tools:context=".ConfirmarCompra">
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F78FD"
+        android:padding="12dp"
+        android:text="Confirmar Compra"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="309dp"
+        app:srcCompat="@drawable/logobustop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="613dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="16dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txtInfoViagem"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btConfirmarCompra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#1F78FD"
+            android:padding="12dp"
+            android:text="Confirmar Compra"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btCancelarCompra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#1F78FD"
+            android:padding="12dp"
+            android:text="Cancelar Compra"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
