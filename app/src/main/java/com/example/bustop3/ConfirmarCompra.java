@@ -32,7 +32,7 @@ public class ConfirmarCompra extends AppCompatActivity {
         btCancelarCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), VizualizarViagens.class);
+                Intent i = new Intent(ConfirmarCompra.this, VizualizarViagens.class);
                 startActivity(i);
             }
         });
@@ -41,6 +41,8 @@ public class ConfirmarCompra extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     new EnviajsonpostConfirmar().execute();
+                Intent intent = new Intent(ConfirmarCompra.this, VizualizarViagens.class);
+                startActivity(intent);
             }
         });
 

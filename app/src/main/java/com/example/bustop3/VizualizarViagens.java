@@ -24,6 +24,7 @@ public class VizualizarViagens extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     int idviagem;
     int idusr;
+    List<String> viagens;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +66,9 @@ public class VizualizarViagens extends AppCompatActivity {
  class EnviajsonpostLogineSenha extends AsyncTask<String, Void, List<String>> {
 
         @Override
-        protected List<String> doInBackground(String... params) {
+        protected List<String> doInBackground(String... params) { 
             Log.d("TAG", "Entrou no doInBackground");
-            List<String> viagens = new ArrayList<>();
+            viagens = new ArrayList<>();
             try {
                 Log.d("TAG", "Entrou no primeiro try");
                 String url = "http://200.132.172.203/bustop/consulta_viagens.php";
@@ -109,8 +110,6 @@ public class VizualizarViagens extends AppCompatActivity {
         protected void onPostExecute(List<String> result) {
             super.onPostExecute(result);
             if (result != null) {
-                //listaDeViagens.clear();
-                //listaDeViagens.addAll(result);
                 adapter.notifyDataSetChanged();
             }
         }
