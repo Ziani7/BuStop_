@@ -13,6 +13,8 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class ConfirmarCompra extends AppCompatActivity {
 
     TextView txtInfoViagem;
@@ -33,6 +35,7 @@ public class ConfirmarCompra extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ConfirmarCompra.this, VizualizarViagens.class);
+                i.putExtra("idusr", idusr);
                 startActivity(i);
             }
         });
@@ -41,8 +44,9 @@ public class ConfirmarCompra extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     new EnviajsonpostConfirmar().execute();
-                Intent intent = new Intent(ConfirmarCompra.this, VizualizarViagens.class);
-                startActivity(intent);
+                    Intent intent = new Intent(ConfirmarCompra.this, VizualizarViagens.class);
+                    intent.putExtra("idusr", idusr);
+                    startActivity(intent);
             }
         });
 

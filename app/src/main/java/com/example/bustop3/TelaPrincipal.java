@@ -43,6 +43,7 @@ public class TelaPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(TelaPrincipal.this, MainActivity.class);
+                i.putExtra("idusr", idusr);
                 startActivity(i);
             }
         });
